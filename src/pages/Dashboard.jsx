@@ -203,7 +203,20 @@ function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100" style={{
+  backgroundImage: `
+    linear-gradient(
+      120deg,
+      rgba(8, 31, 42, 0.96),
+      rgba(0, 91, 85, 0.82),
+      rgba(8, 31, 42, 0.90)
+    ),
+    url('/images/factory-background.jpg')
+  `,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+}}>
 
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
@@ -299,7 +312,7 @@ function Dashboard() {
               <button type="button" onClick={exportExcel} disabled={excelBusy || customers.length === 0} className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-60">
                 Export Excel
               </button>
-              <p className="self-center text-xs text-gray-500">Import requires a “Client / Company Name” column. Export downloads all customers.</p>
+              <p className="self-center text-xs text-gray-500"></p>
             </div>
 
           </div>
